@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | My Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Delivery location</strong>
+      <span>Manage your saved address</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search for "Oil"'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="products.html">Shop</a>
+    <a class="market-cart" href="cart.html">My Cart</a>
+  </header>
+
+  <main class="market-main">
+    <section class="shop-top">
+      <div>
+        <p class="eyebrow">Order history</p>
+        <h1>My Orders</h1>
+        <p>Track your recent Healthyma purchases.</p>
+      </div>
+      <a href="products.html">Continue Shopping</a>
+    </section>
+    <section id="ordersList" class="orders-list">Loading orders...</section>
+  </main>
+
+  <footer>Copyright 2026 Healthyma Foods.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/location-display.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.log
+healthyma_dev.sqlite3
+instance/
+.vscode/
+node_modules/

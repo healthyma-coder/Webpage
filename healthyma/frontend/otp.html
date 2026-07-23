@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | OTP</title>
+  <link rel="stylesheet" href="css/style.css?v=white-auth-2">
+</head>
+<body>
+  <div class="auth-page premium-auth white-auth">
+    <div class="auth-showcase product-showcase">
+      <img class="showcase-logo" src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure">
+      <div class="showcase-products" aria-label="Healthyma product range">
+        <img src="images/moringa-mix-powder.jpeg" alt="Moringa mix powder">
+        <img src="images/curry-leaf-mix.jpeg" alt="Curry leaf mix">
+        <img src="images/millet-atta.jpeg" alt="Millet atta">
+        <img src="images/kambu-ragi-mix.jpeg" alt="Kambu ragi mix">
+        <img src="images/corn-flour.jpeg" alt="Corn flour">
+      </div>
+      <div class="showcase-badges">
+        <span>100% Natural</span>
+        <span>No Preservatives</span>
+        <span>Premium Quality</span>
+      </div>
+      <h1>Verify and continue shopping.</h1>
+      <p>Secure OTP login for Healthyma customers.</p>
+    </div>
+    <div class="auth-card">
+      <img class="auth-logo" src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure">
+      <h2>Verify OTP</h2>
+      <p class="sub" id="phoneDisplay">Enter the OTP sent to your phone</p>
+      <div class="error-msg" id="errorMsg"></div>
+      <input type="text" id="otpInput" placeholder="Enter OTP" maxlength="6" inputmode="numeric">
+      <button class="btn-primary" id="verifyBtn">Verify & Continue</button>
+      <div class="btn-link" id="resendBtn">Resend OTP</div>
+      <div class="demo-hint" id="demoHint" style="display:none;"></div>
+    </div>
+  </div>
+  <script src="js/config.js"></script><script src="js/otp.js"></script>
+</body>
+</html>

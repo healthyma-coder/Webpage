@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Admin Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+  <main id="adminLogin" class="admin-login">
+    <form id="adminLoginForm" class="admin-login-card">
+      <img src="images/healthyma-logo-premium.jpeg" alt="Healthyma">
+      <h1>Admin Login</h1>
+      <label>Username<input id="adminUsername" name="username" autocomplete="username" required></label>
+      <label>Password<input id="adminPassword" name="password" type="password" autocomplete="current-password" required></label>
+      <button id="adminLoginButton" type="submit">Login</button>
+      <p id="adminLoginMessage" class="admin-message"></p>
+    </form>
+  </main>
+
+  <div id="adminToast" class="admin-toast" hidden></div>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/admin.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Add your location</strong>
+      <span>To see delivery options near you</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search for "Ghee"'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="products.html">Shop</a>
+    <a class="market-cart" href="checkout.html">Checkout</a>
+  </header>
+
+  <main class="market-main">
+    <section class="shop-top">
+      <div>
+        <p class="eyebrow">Shopping Cart</p>
+        <h1>Your Cart</h1>
+        <p>Review your Healthyma products before checkout.</p>
+      </div>
+      <a href="products.html">Continue Shopping</a>
+    </section>
+    <div class="section cart-shell" id="cartSection">
+      <div id="cartItemsContainer"><p>Loading cart...</p></div>
+      <div class="cart-summary" id="cartSummary" style="display:none;">
+        <div id="summaryLines" class="summary-lines"></div>
+        <div class="total-row"><span>Payable</span><span id="cartTotal">Rs.0.00</span></div>
+        <button class="secondary-pill full-width" id="emptyCartBtn" type="button">Empty Cart</button>
+        <button class="btn-primary" id="proceedBtn">Proceed to Buy</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>Copyright 2026 Healthyma Foods.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/cart-utils.js"></script>
+  <script src="js/location-display.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Add your location</strong>
+      <span>To see delivery options near you</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search more products'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="products.html">Shop</a>
+    <a class="market-cart" href="cart.html">My Cart</a>
+  </header>
+
+  <main class="market-main">
+    <section class="shop-top">
+      <div>
+        <p class="eyebrow">Checkout</p>
+        <h1>Confirm Your Order</h1>
+        <p>Select a delivery address and payment method to place your Healthyma order.</p>
+      </div>
+      <a href="cart.html">Back to Cart</a>
+    </section>
+    <div class="section checkout-shell">
+      <div class="checkout-grid">
+        <section class="checkout-panel">
+          <div class="panel-heading">
+            <h2>Delivery address</h2>
+            <a href="location.html">Add / Edit</a>
+          </div>
+          <div id="addressList" class="checkout-address-list">Loading addresses...</div>
+        </section>
+
+        <section class="checkout-panel">
+          <div class="panel-heading">
+            <h2>Order summary</h2>
+          </div>
+          <div id="orderSummaryBox" class="order-summary-box">Loading order summary...</div>
+        </section>
+      </div>
+
+      <section class="checkout-panel">
+        <div class="panel-heading">
+          <h2>Payment method</h2>
+        </div>
+        <div class="payment-methods">
+          <button class="payment-card selected" type="button" data-method="COD">
+            <strong>Cash on Delivery</strong>
+            <span>Pay when your order is delivered.</span>
+            <em id="codFeeText">COD fee: Rs.0.00</em>
+          </button>
+          <button class="payment-card" type="button" data-method="ONLINE">
+            <strong>Pay Online</strong>
+            <span>Use Razorpay secure checkout in test mode.</span>
+            <em id="onlineStatusText">Enable Razorpay keys on backend.</em>
+          </button>
+        </div>
+        <label class="agree-row">
+          <input type="checkbox" id="agreeOrder">
+          <span>I confirm the items, delivery address, and payable amount.</span>
+        </label>
+        <p id="checkoutMessage" class="form-message"></p>
+        <button class="btn-primary" id="placeOrderBtn" type="button">Place Order</button>
+      </section>
+
+      <div class="checkout-options">
+        <button class="checkout-btn whatsapp" id="whatsappBtn">Send Order via WhatsApp</button>
+        <button class="checkout-btn instagram" id="instagramBtn">Send Order via Instagram DM</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>Copyright 2026 Healthyma Foods.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/cart-utils.js"></script>
+  <script src="js/location-display.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

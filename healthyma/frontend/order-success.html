@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Order Placed</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Delivery location</strong>
+      <span>Manage your saved address</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search for "Moringa"'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="products.html">Shop</a>
+    <a class="market-cart" href="orders.html">Orders</a>
+  </header>
+
+  <main class="market-main">
+    <section class="checkout-panel success-panel">
+      <p class="eyebrow">Order placed</p>
+      <h1>Thank you for shopping Healthyma</h1>
+      <p id="successMessage">Loading order details...</p>
+      <div id="successDetails" class="order-summary-box"></div>
+      <div class="success-actions">
+        <a class="primary-pill" href="products.html">Continue Shopping</a>
+        <a class="secondary-pill" href="orders.html">View Orders</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Copyright 2026 Healthyma Foods.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/location-display.js"></script>
+  <script src="js/order-success.js"></script>
+</body>
+</html>

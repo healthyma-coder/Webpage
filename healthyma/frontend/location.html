@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Delivery Location</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Add your location</strong>
+      <span>To see delivery options near you</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search for "Moringa"'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="products.html">Shop</a>
+    <a class="market-cart" href="cart.html">My Cart</a>
+  </header>
+
+  <main class="market-main">
+    <section class="location-layout">
+      <div class="location-panel">
+        <p class="eyebrow">Delivery Location</p>
+        <h1>Choose delivery address</h1>
+        <p class="location-help">Save multiple addresses, select the active delivery address, or add a new one before shopping.</p>
+
+        <div class="saved-addresses" id="savedAddresses">
+          <div class="empty-address-book">No saved addresses yet.</div>
+        </div>
+
+        <div class="location-actions">
+          <button class="secondary-pill" id="newAddressBtn" type="button">Add New Address</button>
+          <button class="primary-pill" id="detectLocationBtn">Use Current Location</button>
+          <a class="secondary-pill" id="openMapBtn" href="https://www.google.com/maps" target="_blank" rel="noopener">Open Map</a>
+        </div>
+
+        <div class="map-box" id="mapBox">
+          <strong>Map location not selected</strong>
+          <span>Click "Use Current Location" to get latitude and longitude.</span>
+        </div>
+      </div>
+
+      <form class="address-form" id="addressForm" autocomplete="off">
+        <input type="hidden" id="addressId">
+        <label>
+          Address label
+          <input id="addressLabel" required autocomplete="off" placeholder="Home, Office, Shop">
+        </label>
+        <label>
+          Full name
+          <input id="fullName" required autocomplete="off" placeholder="Customer name">
+        </label>
+        <label>
+          Phone number
+          <input id="addressPhone" required maxlength="10" inputmode="numeric" autocomplete="off" placeholder="10-digit mobile number">
+        </label>
+        <label>
+          House / Flat / Street
+          <input id="addressLine" required autocomplete="off" placeholder="Door no, street, apartment">
+        </label>
+        <label>
+          Area / Landmark
+          <input id="landmark" autocomplete="off" placeholder="Nearby landmark">
+        </label>
+        <div class="form-row">
+          <label>
+            City
+            <input id="city" required autocomplete="off" placeholder="City">
+          </label>
+          <label>
+            Pincode
+            <input id="pincode" required maxlength="6" inputmode="numeric" autocomplete="off" placeholder="Pincode">
+          </label>
+        </div>
+        <label>
+          Delivery note
+          <textarea id="deliveryNote" rows="3" placeholder="Any delivery instruction"></textarea>
+        </label>
+        <input type="hidden" id="latitude">
+        <input type="hidden" id="longitude">
+        <div class="form-message" id="locationMessage"></div>
+        <button class="btn-primary" type="submit">Save and Use Address</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>Copyright 2026 Healthyma Foods. Healthy. Pure. Natural.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/location-display.js?v=2"></script>
+  <script src="js/location.js?v=2"></script>
+</body>
+</html>

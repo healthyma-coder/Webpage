@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Shop Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Add your location</strong>
+      <span>To see delivery options near you</span>
+    </a>
+    <div class="market-search">
+      <input id="searchInput" placeholder='Search for "Moringa"'>
+      <button type="button" aria-label="Search">Search</button>
+    </div>
+    <a class="market-sign" href="login.html" id="logoutLink">Sign out</a>
+    <a class="market-cart" href="cart.html">My Cart</a>
+  </header>
+
+  <main class="market-main">
+    <section class="shop-premium-hero">
+      <div class="shop-premium-copy">
+        <p class="eyebrow">Customer Store</p>
+        <h1>Shop Healthyma Products</h1>
+        <p>Natural, pure and healthy pouch products for your kitchen. Search, select a category, add products to cart, and send your order through WhatsApp.</p>
+        <div class="shop-premium-actions">
+          <a href="#productGrid">Explore Products</a>
+          <a href="cart.html">View Cart</a>
+        </div>
+      </div>
+      <img src="images/kambu-ragi-mix.jpeg" alt="Healthyma kambu ragi mix">
+    </section>
+
+    <section class="mini-category-wrap">
+      <h2>Grocery and kitchen</h2>
+      <div class="category-grid mini">
+        <button class="category-card category-shortcut" data-category="Health Mix"><img src="images/moringa-mix-powder.jpeg" alt="Health Mix"><strong>Health Mix</strong></button>
+        <button class="category-card category-shortcut" data-category="Millet Flour"><img src="images/millet-atta.jpeg" alt="Millet Flour"><strong>Millet Flour</strong></button>
+        <button class="category-card category-shortcut" data-category="Flour"><img src="images/corn-flour.jpeg" alt="Flour"><strong>Flour</strong></button>
+        <button class="category-card category-shortcut" data-category="Health Mix"><img src="images/curry-leaf-mix.jpeg" alt="Curry Leaf Mix"><strong>Curry Leaf Mix</strong></button>
+        <button class="category-card category-shortcut" data-category="Millet Flour"><img src="images/kambu-ragi-mix.jpeg" alt="Kambu Ragi Mix"><strong>Kambu Ragi</strong></button>
+      </div>
+    </section>
+
+    <div class="category-bar" id="categoryBar"><div class="category-chip active" data-category="all">All</div></div>
+    <div class="product-count-row"><span id="productCount">0 products</span></div>
+    <div class="product-grid market-product-grid" id="productGrid"></div>
+  </main>
+
+  <div class="floating-bar" id="floatingBar"><div><strong id="cartCount">0 items</strong><span id="cartSubtotal">Rs.0</span></div><button id="goToCartBtn">View Cart</button></div>
+  <footer>Copyright 2026 Healthyma Foods.</footer>
+  <script src="js/config.js"></script>
+  <script src="js/cart-utils.js"></script>
+  <script src="js/location-display.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

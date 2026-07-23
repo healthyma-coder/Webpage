@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthyma | Premium Natural Foods</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+  <header class="market-header">
+    <a class="market-logo" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma The Pure"></a>
+    <a class="market-location" href="location.html">
+      <strong>Add your location</strong>
+      <span>To see delivery options near you</span>
+    </a>
+    <form class="market-search" action="products.html">
+      <input name="q" placeholder='Search for "Moringa"'>
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+    <a class="market-sign" href="login.html" id="logoutLink">Sign out</a>
+    <a class="market-cart" href="cart.html">My Cart</a>
+  </header>
+
+  <main class="market-main">
+    <section class="promo-row" aria-label="Featured offers">
+      <a class="promo-card promo-teal" href="products.html?category=Health%20Mix">
+        <div><span>Moringa Mix Powder</span><strong>Premium podi for daily nutrition</strong><button>Shop Now</button></div>
+        <img src="images/moringa-mix-powder.jpeg" alt="Moringa mix powder">
+      </a>
+      <a class="promo-card promo-blue" href="products.html?category=Millet%20Flour">
+        <div><span>Millet Atta</span><strong>Multigrain flour for every kitchen</strong><button>Shop Now</button></div>
+        <img src="images/millet-atta.jpeg" alt="Millet atta">
+      </a>
+      <a class="promo-card promo-dark" href="products.html">
+        <div><span>Corn Flour</span><strong>Natural packs in the Healthyma style</strong><button>Shop Now</button></div>
+        <img src="images/corn-flour.jpeg" alt="Corn flour">
+      </a>
+    </section>
+
+    <section class="wide-offer">
+      <div>
+        <span>Natural. Pure. Healthy.</span>
+        <h1>Premium Healthyma pouch products, ready to order</h1>
+        <p>Shop moringa podi, curry leaf mix, millet atta, kambu ragi mix and corn flour with a clean checkout.</p>
+        <a href="products.html">Start Shopping</a>
+      </div>
+      <img src="images/curry-leaf-mix.jpeg" alt="Healthyma curry leaf mix pouch">
+    </section>
+
+    <section class="market-section">
+      <div class="market-title"><h2>Shop by category</h2><a href="products.html">View all</a></div>
+      <div class="category-grid">
+        <a href="products.html?category=Health%20Mix" class="category-card"><img src="images/moringa-mix-powder.jpeg" alt="Health Mix"><strong>Health Mix</strong></a>
+        <a href="products.html?category=Millet%20Flour" class="category-card"><img src="images/millet-atta.jpeg" alt="Millet Flour"><strong>Millet Flour</strong></a>
+        <a href="products.html?category=Flour" class="category-card"><img src="images/corn-flour.jpeg" alt="Flour"><strong>Flour</strong></a>
+        <a href="products.html?category=Health%20Mix" class="category-card"><img src="images/curry-leaf-mix.jpeg" alt="Curry Leaf Mix"><strong>Curry Leaf Mix</strong></a>
+        <a href="products.html?category=Millet%20Flour" class="category-card"><img src="images/kambu-ragi-mix.jpeg" alt="Kambu Ragi Mix"><strong>Kambu Ragi</strong></a>
+      </div>
+    </section>
+
+    <section class="market-section">
+      <div class="market-title"><h2>Popular products</h2><a href="products.html">Shop all</a></div>
+      <div class="home-product-grid" id="popularProducts"><p>Loading popular products...</p></div>
+    </section>
+  </main>
+
+  <div class="floating-bar" id="floatingBar"><div><strong id="cartCount">0 items</strong><span id="cartSubtotal">Rs.0</span></div><button id="goToCartBtn">View Cart</button></div>
+  <footer>Copyright 2026 Healthyma Foods. Healthy. Pure. Natural.</footer>
+  <script src="js/config.js"></script><script src="js/cart-utils.js"></script><script src="js/location-display.js"></script><script src="js/home.js"></script>
+</body>
+</html>

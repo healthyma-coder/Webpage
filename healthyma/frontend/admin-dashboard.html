@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyma | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+  <div id="adminApp" class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="home.html"><img src="images/healthyma-logo-premium.jpeg" alt="Healthyma"></a>
+      <nav>
+        <button class="admin-nav active" data-panel="dashboardPanel">Dashboard</button>
+        <button class="admin-nav" data-panel="productsPanel">Products</button>
+        <button class="admin-nav" data-panel="ordersPanel">Orders</button>
+        <button class="admin-nav" data-panel="customersPanel">Customers</button>
+      </nav>
+      <button id="adminLogout" class="admin-logout">Logout</button>
+    </aside>
+
+    <section class="admin-content">
+      <header class="admin-topbar">
+        <div>
+          <p>Healthyma</p>
+          <h1>Admin Control</h1>
+        </div>
+        <button id="refreshDashboard">Refresh Dashboard</button>
+      </header>
+
+      <section id="dashboardPanel" class="admin-panel active">
+        <div id="statsGrid" class="admin-stats"></div>
+      </section>
+
+      <section id="productsPanel" class="admin-panel">
+        <div class="admin-section-head">
+          <h2>Products</h2>
+          <div class="admin-filter-row">
+            <input id="productSearch" placeholder="Search products">
+            <select id="productCategoryFilter"><option value="all">All categories</option></select>
+          </div>
+        </div>
+        <form id="productForm" class="admin-form">
+          <input type="hidden" id="productId">
+          <label>Name<input id="productName" required></label>
+          <label>Category<input id="productCategory" required></label>
+          <label>Selling price<input id="productPrice" type="number" min="0" step="0.01" required></label>
+          <label>MRP / old price<input id="productComparePrice" type="number" min="0" step="0.01"></label>
+          <label>Weight / size<input id="productWeight" placeholder="250g or 1kg"></label>
+          <label>Stock<input id="productStock" type="number" min="0" step="1" required></label>
+          <label>Low-stock limit<input id="productLowStock" type="number" min="0" step="1" value="10"></label>
+          <label>Image path<input id="productImage" placeholder="/images/product.jpeg"></label>
+          <label class="admin-wide">Description<textarea id="productDescription" rows="3"></textarea></label>
+          <label class="admin-check"><input id="productFeatured" type="checkbox"> Featured</label>
+          <label class="admin-check"><input id="productBestSeller" type="checkbox"> Best seller</label>
+          <label class="admin-check"><input id="productActive" type="checkbox" checked> Active</label>
+          <div class="admin-form-actions">
+            <button type="submit">Save Product</button>
+            <button id="resetProductForm" type="button">Clear</button>
+          </div>
+        </form>
+        <div id="productsTable" class="admin-table-wrap"></div>
+      </section>
+
+      <section id="ordersPanel" class="admin-panel">
+        <div class="admin-section-head">
+          <h2>Orders</h2>
+          <div class="admin-filter-row">
+            <input id="orderSearch" placeholder="Order number or phone">
+            <select id="orderStatusFilter">
+              <option value="all">All statuses</option>
+              <option>CONFIRMED</option>
+              <option>PACKING</option>
+              <option>OUT_FOR_DELIVERY</option>
+              <option>DELIVERED</option>
+              <option>CANCELLED</option>
+            </select>
+          </div>
+        </div>
+        <div id="ordersTable" class="admin-table-wrap"></div>
+      </section>
+
+      <section id="customersPanel" class="admin-panel">
+        <div class="admin-section-head"><h2>Customers</h2></div>
+        <div id="customersTable" class="admin-table-wrap"></div>
+      </section>
+    </section>
+  </div>
+
+  <div id="adminToast" class="admin-toast" hidden></div>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/admin.js?v=6"></script>
+</body>
+</html>
